@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <p id="join"></p> -->
+    <!-- <p id="demo"></p> -->
+    <!-- <p id="sort"></p>
+    <p id="rev"></p>
+     <!-- <script>
+        const fruit = ["Banana", "Orange", "Apple"];
+
+        // let flen = fruit.length;
+        // for (let i = 0; i < flen; i++) {
+        //     document.write(fruit[i]);
+        // }
+            // document.getElementById("demo").innerHTML=fruit.toString();
+            // document.getElementById("join").innerHTML=fruit.join("*");
+
+            // const sli=fruit.slice(1,3);
+            // document.write("<br>"+sli);
+
+            document.getElementById("sort").innerHTML=fruit.sort();
+            
+    </script>
+    <script>
+        const arr1=["Hello", "Hi"];
+        const arr2=[1,2,4];
+        const arr3=arr1.concat(arr2);
+        document.write("<br><br>"+arr3);
+    </script> -->
+    <p>
+        <button onclick="factor()">Factor</button>
+        <button onclick="cal()">Calculator</button>
+    </p>
+
+    <script>
+        function factor() {
+            var x = parseInt(prompt('Enter your number: '))
+            var factors = []
+
+            for (let i = 1; i <= x; i++) {
+                if (x % i == 0) {
+                    factors.push(i)
+                }
+            }
+
+            var result = 'The factors of ' + x + ' are: ' + factors.join(', ')
+            document.write(result)
+            
+        }
+    </script>
+    <script>
+        function cal() {
+            let calculator = prompt("Enter the operation you want to perform (+, -, *, /): ");
+            let num1 = parseFloat(prompt("Enter the first number: "));
+            let num2 = parseFloat(prompt("Enter the second number: "));
+
+            let result;
+
+            if (calculator === '+') {
+                result = num1 + num2;
+            } else if (calculator === '-') {
+                result = num1 - num2;
+            } else if (calculator === '*') {
+                result = num1 * num2;
+            } else if (calculator === '/') {
+                if (num2 !== 0) {
+                    result = num1 / num2;
+                } else {
+                    console.log("Error: Cannot divide by zero.");
+                }
+            } else {
+                console.log("Invalid operation.");
+            }
+
+            if (result !== undefined) {
+                document.write(`Result: ${result}`);
+            }
+        }
+    </script>
+</body>
+
+</html>
